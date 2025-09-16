@@ -133,3 +133,87 @@
 .pf-v5-c-login .pf-v5-u-pb-xs {
     padding-block-end: var(--pf-v5-global--spacer--md) !important;
 }
+
+/* -------------------------------------------------------
+   Tekna checkbox styling
+   -----------------------------------------------------*/
+.pf-v5-c-check {
+    margin-block: 1rem;
+}
+
+.pf-v5-c-check__input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+}
+
+.pf-v5-c-check__label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding-inline-start: 2rem;
+    min-height: 1.5rem;
+    cursor: pointer;
+}
+
+.pf-v5-c-check__label::before,
+.pf-v5-c-check__label::after {
+    content: "";
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 0;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.pf-v5-c-check__label::before {
+    border: 1px solid #666;
+    background: #f5f5f5;
+    transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pf-v5-c-check__label::after {
+    background: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px;
+    opacity: 0;
+    transform: translateY(-50%) scale(0.6);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.pf-v5-c-check__input:checked + .pf-v5-c-check__label::before {
+    background-color: #fff;
+    border-color: #666;
+}
+
+.pf-v5-c-check__input:checked + .pf-v5-c-check__label::after {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='15' height='10' viewBox='0 0 15 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 5l4 4 8-8' stroke='%23000' stroke-miterlimit='10' stroke-linecap='square'/%3E%3C/svg%3E");
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+}
+
+.pf-v5-c-check__input:not(:disabled) + .pf-v5-c-check__label:hover::before {
+    border-color: #000;
+}
+
+.pf-v5-c-check__input:focus-visible + .pf-v5-c-check__label::before {
+    border-color: var(--brand-button-bg, #008282);
+    box-shadow: 0 0 0 4px rgba(0, 130, 130, 0.2);
+}
+
+.pf-v5-c-check__input:disabled + .pf-v5-c-check__label {
+    color: #9f9f9f;
+    cursor: not-allowed;
+}
+
+.pf-v5-c-check__input:disabled + .pf-v5-c-check__label::before {
+    background: #f0f0f0;
+    border-color: #d6d6d6;
+}
