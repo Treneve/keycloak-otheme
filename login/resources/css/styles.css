@@ -1,0 +1,135 @@
+/* -------------------------------------------------------
+   1) Overall page layout
+   -----------------------------------------------------*/
+
+
+#kc-header {
+    display: none;
+}
+
+/* Uses the outer PF5 login wrapper */
+.pf-v5-c-login {
+    background-image: url("../img/bli-medlem-ill.svg");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+
+.pf-v5-c-login__container {
+    grid-template: none
+}
+
+.pf-v5-c-login__main {
+    --pf-v5-c-login__main--BoxShadow: none;
+    border-radius: 15px;
+    width: 436px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+.pf-v5-c-title {
+    position: relative;
+}
+
+.pf-v5-c-title::before {
+    content: "";
+    display: block;
+    width: 167px;
+    height: 47px;
+    background: url('../img/logo-tekna.svg') no-repeat left center / contain;
+    margin-bottom: 2rem;
+}
+
+.pf-v5-c-form__label-text {
+    font-weight: 400;
+}
+
+.pf-v5-c-alert__icon::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 17px;
+    background: url('../img/error-icon.svg') no-repeat left center / contain;
+    margin-top: 2px;
+}
+
+.pf-v5-c-login {
+    --text-underline-offset: 0.25em;
+    --text-decoration-thickness: 1px;
+    --text-decoration-thickness-hover: 2px;
+}
+
+.pf-v5-c-login a {
+    color: inherit;
+    text-decoration-color: inherit;
+    text-underline-offset: var(--text-underline-offset);
+    text-decoration-thickness: var(--text-decoration-thickness);
+    transition: all 0.066s;
+    cursor: pointer;
+}
+
+.pf-v5-c-login a:hover,
+.pf-v5-c-login a:focus {
+    text-decoration: revert;
+    text-decoration-thickness: var(--text-decoration-thickness-hover) !important;
+}
+
+
+.kc-login-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.kc-login-tooltip .kc-tooltip-text {
+    /* Position above trigger, centered */
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* Brand look */
+    background-color: var(--brand-button-bg);
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 400;
+    border-radius: 2px;
+    padding: 8px 12px;
+    box-shadow: none;
+    white-space: nowrap;
+    min-width: max-content;
+
+    /* Show/Hide */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Show tooltip */
+.kc-login-tooltip:hover .kc-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Arrow for tooltip */
+.kc-login-tooltip .kc-tooltip-text::after {
+    /* Centered downward caret */
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 8px 8px 0 8px;
+    border-color: var(--brand-button-bg) transparent transparent transparent;
+}
+
+.pf-v5-c-login p.instruction {
+    margin-bottom: 1rem;
+}
+
+.pf-v5-c-login .pf-v5-u-pb-xs {
+    padding-block-end: var(--pf-v5-global--spacer--md) !important;
+}

@@ -1,0 +1,8 @@
+/* Dark mode overrides */
+
+.pf-v5-theme-dark .pf-v5-c-login {
+  --brand-button-bg: #005063;
+  --brand-button-bg--hover: #00242e;
+  --brand-button-bg--active: #004a58;
+}
+

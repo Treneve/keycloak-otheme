@@ -1,0 +1,147 @@
+/* Buttons – PF5 token-first overrides and fallbacks */
+
+/* Prefer customizing PatternFly via its component vars. Scoped to login. */
+.pf-v5-c-login .pf-v5-c-button {
+  /* Primary variant on brand background */
+  --pf-v5-c-button--m-primary--BackgroundColor: var(--brand-button-bg);
+  --pf-v5-c-button--m-primary--Color: #fff;
+  --pf-v5-c-button--m-primary--hover--BackgroundColor: var(--brand-button-bg--hover);
+  --pf-v5-c-button--m-primary--focus--BackgroundColor: var(--brand-button-bg--hover);
+  --pf-v5-c-button--m-primary--active--BackgroundColor: var(--brand-button-bg--active);
+
+  /* Secondary variant: white -> light teal on hover */
+  --pf-v5-c-button--m-secondary--BackgroundColor: #fff;
+  --pf-v5-c-button--m-secondary--hover--BackgroundColor: #CCF0F0;
+  --pf-v5-c-button--m-secondary--after--BorderColor: #003847;
+  --pf-v5-c-button--m-secondary--Color: #003847;
+  --pf-v5-c-button--after--BorderRadius: 0;
+
+  /* Size: target ~48px total height
+     Height ≈ (font-size * line-height) + top + bottom
+     With PF default md line-height (~1.5) this gives 24px + 12px + 12px = 48px */
+  --pf-v5-c-button--PaddingTop: 17px;
+  --pf-v5-c-button--PaddingBottom: 17px;
+
+  /* Optional: slightly rounder corners, matches site look */
+  --pf-v5-c-button--BorderRadius: 0;
+
+  /* Keep link buttons aligned with brand links */
+  --pf-v5-c-button--m-link--Color: var(--brand-link);
+  --pf-v5-c-button--m-link--hover--Color: var(--brand-primary-accent);
+}
+
+/* Make real buttons bold (but not link-style buttons) */
+.pf-v5-c-login .pf-v5-c-button:not(.pf-m-link) {
+  --pf-v5-c-button--FontWeight: var(--pf-v5-global--FontWeight--bold);
+}
+
+/* Robust fallbacks in case upstream markup bypasses PF vars */
+.pf-v5-c-login .pf-v5-c-button.pf-m-primary {
+  background-color: var(--brand-button-bg);
+  border-color: var(--brand-button-bg);
+  color: #fff;
+  transition: background-color 180ms ease, box-shadow 180ms ease, color 180ms ease;
+}
+
+/* Fallbacks for secondary variant */
+.pf-v5-c-login .pf-v5-c-button.pf-m-secondary {
+  background-color: #fff;
+  border-color: #003847;
+  color: #003847;
+  border-radius: 0;
+  transition: background-color 180ms ease;
+  /* Keep border width and color stable across states */
+  --pf-v5-c-button--after--BorderWidth: 1px;
+  --pf-v5-c-button--hover--after--BorderWidth: 1px;
+  --pf-v5-c-button--focus--after--BorderWidth: 1px;
+  --pf-v5-c-button--active--after--BorderWidth: 1px;
+  --pf-v5-c-button--m-secondary--hover--after--BorderColor: #003847;
+  --pf-v5-c-button--m-secondary--focus--after--BorderColor: #003847;
+  --pf-v5-c-button--m-secondary--active--after--BorderColor: #003847;
+  text-decoration: none !important; /* anchor-based button should not underline */
+}
+.pf-v5-c-login .pf-v5-c-button.pf-m-secondary:hover {
+  background-color: #CCF0F0;
+  --pf-v5-c-button--after--BorderColor: #003847;
+  border-color: #003847; /* fallback to avoid color shift */
+  text-decoration: none !important;
+}
+
+/* Extra guard: never underline non-link variant buttons even if they are anchors */
+.pf-v5-c-login .pf-v5-c-button:not(.pf-m-link) { text-decoration: none !important; }
+.pf-v5-c-login .pf-v5-c-button:not(.pf-m-link):is(:hover,:focus) { text-decoration: none !important; }
+
+.pf-v5-c-login .pf-v5-c-button.pf-m-primary:hover {
+  background-color: var(--brand-button-bg--hover);
+}
+
+.pf-v5-c-login .pf-v5-c-button.pf-m-primary:active {
+  background-color: var(--brand-button-bg--active);
+}
+
+/* Accessible keyboard focus ring (teal accent) */
+.pf-v5-c-login .pf-v5-c-button.pf-m-primary:focus-visible {
+  outline: 2px solid var(--brand-yellow);
+  outline-offset: 2px;
+}
+
+/* Disabled state retains contrast but looks inert */
+.pf-v5-c-login .pf-v5-c-button.pf-m-primary:disabled,
+.pf-v5-c-login .pf-v5-c-button.pf-m-primary.pf-m-disabled {
+  background-color: #2c3e44;
+  border-color: #2c3e44;
+  color: rgba(255, 255, 255, .72);
+}
+
+#reset-login .fa-sync-alt::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../../img/rotate-ccw.svg) no-repeat center / contain;
+    position: relative;
+    top: 4px;
+}
+
+/* Make input-group control buttons match form-control borders */
+.pf-v5-c-login .pf-v5-c-button.pf-m-control {
+  /* Ensure a full 1px border like inputs */
+  --pf-v5-c-button--m-control--after--BorderTopWidth: 1px;
+  --pf-v5-c-button--m-control--after--BorderRightWidth: 1px;
+  --pf-v5-c-button--m-control--after--BorderBottomWidth: 1px;
+  --pf-v5-c-button--m-control--after--BorderLeftWidth: 1px;
+
+  /* Default border color identical to inputs */
+  --pf-v5-c-button--m-control--after--BorderColor: var(--pf-v5-c-form-control--BorderColor, #b1b3b4);
+  --pf-v5-c-button--m-control--after--BorderTopColor: var(--pf-v5-c-form-control--before--BorderTopColor, #b1b3b4);
+  --pf-v5-c-button--m-control--after--BorderRightColor: var(--pf-v5-c-form-control--before--BorderRightColor, #b1b3b4);
+  --pf-v5-c-button--m-control--after--BorderBottomColor: var(--pf-v5-c-form-control--before--BorderBottomColor, #b1b3b4);
+  --pf-v5-c-button--m-control--after--BorderLeftColor: var(--pf-v5-c-form-control--before--BorderLeftColor, #b1b3b4);
+
+  --pf-v5-c-button--m-control--after--BorderRadius: 0;
+  border-radius: 0; /* fallback */
+  border-color: var(--pf-v5-c-form-control--BorderColor, #b1b3b4); /* fallback */
+}
+
+/* Hover/focus: adopt the same accent color as inputs */
+.pf-v5-c-login .pf-v5-c-button.pf-m-control:hover,
+.pf-v5-c-login .pf-v5-c-button.pf-m-control:focus-visible {
+  /* Keep border colors unchanged (esp. bottom) */
+  --pf-v5-c-button--m-control--after--BorderTopColor: var(--pf-v5-c-form-control--before--BorderTopColor, #b1b3b4);
+  --pf-v5-c-button--m-control--after--BorderRightColor: var(--pf-v5-c-form-control--before--BorderRightColor, #b1b3b4);
+  --pf-v5-c-button--m-control--after--BorderBottomColor: var(--pf-v5-c-form-control--before--BorderBottomColor, #b1b3b4);
+  --pf-v5-c-button--m-control--after--BorderLeftColor: var(--pf-v5-c-form-control--before--BorderLeftColor, #b1b3b4);
+  --pf-v5-c-button--m-control--after--BorderColor: var(--pf-v5-c-form-control--BorderColor, #b1b3b4);
+
+  /* Instead, give a light background on hover */
+  --pf-v5-c-button--m-control--hover--BackgroundColor: var(--brand-light-blue-bg);
+  background-color: var(--brand-light-blue-bg);
+  border-color: var(--pf-v5-c-form-control--BorderColor, #b1b3b4); /* fallback consistency */
+
+}
+
+/* Ensure PF overlay bottom border doesn't thicken on hover */
+.pf-v5-c-login .pf-v5-c-button.pf-m-control:hover::after,
+.pf-v5-c-login .pf-v5-c-button.pf-m-control:focus-visible::after {
+  border-bottom-width: 1px !important;
+}

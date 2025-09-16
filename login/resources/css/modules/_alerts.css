@@ -1,0 +1,37 @@
+/* Alerts – danger title styling and inline variant reset */
+
+/* Prefer component vars so PF structure stays intact */
+.pf-v5-c-login .pf-v5-c-alert.pf-m-danger {
+  --pf-v5-c-alert__title--Color: var(--brand-danger);
+  --pf-v5-c-alert__title--FontWeight: var(--pf-v5-global--FontWeight--normal);
+}
+
+/* Fallback if a different scope blocks the vars */
+.pf-v5-c-login .pf-v5-c-alert.pf-m-danger .pf-v5-c-alert__title {
+  color: var(--brand-danger);
+  font-weight: var(--pf-v5-global--FontWeight--normal);
+}
+
+/* Remove background + top border for inline danger alerts */
+.pf-v5-c-login .pf-v5-c-alert.pf-m-inline.pf-m-danger {
+  --pf-v5-c-alert--BackgroundColor: transparent;
+  --pf-v5-c-alert--m-inline--BackgroundColor: transparent;
+  --pf-v5-c-alert--m-inline--m-danger--BackgroundColor: transparent;
+  /* remove left indent */
+  --pf-v5-c-alert--PaddingLeft: 0;
+  --pf-v5-c-alert--BorderTopWidth: 0;
+  --pf-v5-c-alert--BorderTopColor: transparent;
+  --pf-v5-c-alert--BoxShadow: none;
+  margin-bottom:0!important;
+  padding-bottom: .5rem!important;
+}
+
+/* Fallbacks if any token is ignored */
+.pf-v5-c-login .pf-v5-c-alert.pf-m-inline {
+  padding-left: 0;
+}
+
+.pf-v5-c-login .pf-v5-c-alert.pf-m-inline .pf-v5-c-alert__icon {
+  margin-left: 0;
+}
+

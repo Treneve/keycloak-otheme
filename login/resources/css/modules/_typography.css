@@ -1,0 +1,68 @@
+/* Typography: families, titles, copy, links */
+
+/* Typographic fallbacks to ensure the fonts are applied */
+.pf-v5-c-login,
+.pf-v5-c-login * {
+  font-family: var(--pf-v5-global--FontFamily--text, "Tekna", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial);
+}
+
+.pf-v5-c-login .pf-v5-c-title {
+  font-family: var(--pf-v5-global--FontFamily--heading, "Tekna Display", "Tekna", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial);
+}
+
+/* Map your type scale to PF titles (mobile ≤768px uses the smaller size) */
+.pf-v5-c-login .pf-v5-c-title.pf-m-4xl {
+  font-size: clamp(50px, 8vw, 90px);
+  line-height: 1.3;
+}
+
+.pf-v5-c-login .pf-v5-c-title.pf-m-3xl {
+  font-size: clamp(40px, 6vw, 75px);
+  line-height: 1.4;
+}
+
+.pf-v5-c-login .pf-v5-c-title.pf-m-2xl {
+  font-size: clamp(30px, 4.5vw, 45px);
+  line-height: 1.4;
+}
+
+.pf-v5-c-login .pf-v5-c-title.pf-m-xl {
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+/* Body copy */
+.pf-v5-c-login p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--brand-text);
+}
+
+/* Labels follow muted tone and smaller size */
+.pf-v5-c-login .pf-v5-c-form__label-text {
+  font-size: .813rem; /* 13px */
+  line-height: 1.6;
+  color: var(--brand-text);
+}
+
+.pf-v5-c-login .pf-v5-c-helper-text__item-text {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Links */
+.pf-v5-c-login a {
+  color: var(--brand-link);
+  text-decoration: underline;
+}
+
+.pf-v5-c-login a:hover {
+  color: var(--brand-link);
+}
+
+/* Link focus visibility */
+.pf-v5-c-login a:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+

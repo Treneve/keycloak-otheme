@@ -1,0 +1,50 @@
+/* Brand tokens (scoped to the PF5 login container) */
+.pf-v5-c-login {
+  /* Palette from your spec */
+  --brand-text: #000000;
+  /* Sort */
+  --brand-text-muted: rgba(0, 0, 0, .60);
+  /* Sekundær 60% */
+  --brand-link: #003847;
+  /* Mørke blå for links on light */
+  --brand-primary: #00B3B3;
+  /* Turkis (focus/active highlights) */
+  --brand-primary-accent: #28FAFF;
+  /* Skarp blå (hover highlight) */
+  --brand-light-blue: #CCF0F0;
+  /* Lys blå */
+  --brand-light-blue-bg: #E8F9F9;
+  /* Lys blå BG */
+  --brand-yellow: #F7D68B;
+  /* Gul */
+
+  --brand-danger: #D30000;
+  /* Error text & borders */
+  --brand-danger-bg: #FBE6E6;
+  /* Error background (10%) */
+  --brand-success: #007A0F;
+  /* Success text */
+  --brand-success-bg: #E6F2E7;
+  /* Success background (10%) */
+  --brand-warning-bg: #FCEFD1;
+  /* Warning background (40% of Gul) */
+
+  /* Accessible primary button background (white text passes contrast) */
+  --brand-button-bg: #003847;
+  /* dark blue/teal like tekna.no */
+  --brand-button-bg--hover: #00242e;
+  /* hover shade */
+  --brand-button-bg--active: #004a58;
+  /* active shade */
+
+  /* Prefer PF's global font tokens; fall back with direct selectors below */
+  --pf-v5-global--FontFamily--text: "Tekna", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --pf-v5-global--FontFamily--heading: "Tekna Display", "Tekna", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
+
+  /* Subtle page background */
+  background-color: var(--brand-light-blue-bg);
+
+  --pf-v5-global--FontSize--md: 1.125rem;
+  /* 18px base size */
+
+}

@@ -1,0 +1,79 @@
+/* Social – Vipps button styling */
+
+/* Transform the secondary social button into a brand Vipps button */
+.pf-v5-c-login #social-vipps.pf-v5-c-button {
+  /* Token-first: make secondary look filled */
+  --pf-v5-c-button--m-secondary--BackgroundColor: #FF5B24;
+  --pf-v5-c-button--m-secondary--Color: #fff;
+  --pf-v5-c-button--m-secondary--after--BorderColor: transparent;
+  --pf-v5-c-button--m-secondary--hover--after--BorderColor: transparent;
+  --pf-v5-c-button--m-secondary--focus--after--BorderColor: transparent;
+  --pf-v5-c-button--m-secondary--active--after--BorderColor: transparent;
+  --pf-v5-c-button--after--BorderWidth: 0;
+  --pf-v5-c-button--hover--after--BorderWidth: 0;
+  --pf-v5-c-button--focus--after--BorderWidth: 0;
+  --pf-v5-c-button--active--after--BorderWidth: 0;
+  --pf-v5-c-button--m-secondary--hover--BackgroundColor: #ff6a3b;
+  /* subtle hover */
+  --pf-v5-c-button--m-secondary--hover--Color: #fff;
+  --pf-v5-c-button--m-secondary--focus--BackgroundColor: #ff6a3b;
+  --pf-v5-c-button--m-secondary--active--BackgroundColor: #e65422;
+  --pf-v5-c-button--BorderRadius: 0;
+  --pf-v5-c-button--PaddingLeft: 1rem;
+  --pf-v5-c-button--PaddingRight: 1rem;
+
+  /* Layout overrides (PF utilities set space-between) */
+  justify-content: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: background-color 180ms ease, box-shadow 180ms ease, color 180ms ease;
+}
+
+/* Ensure the overlay border stays invisible and fades smoothly */
+.pf-v5-c-login #social-vipps.pf-v5-c-button::after {
+  border-color: transparent;
+  transition: border-color 180ms ease, border-width 180ms ease;
+}
+
+.pf-v5-c-login #social-vipps.pf-v5-c-button:hover::after,
+.pf-v5-c-login #social-vipps.pf-v5-c-button:focus::after,
+.pf-v5-c-login #social-vipps.pf-v5-c-button:active::after {
+  border-color: transparent;
+}
+
+/* Fallbacks if component vars are bypassed */
+.pf-v5-c-login #social-vipps.pf-v5-c-button.pf-m-secondary {
+  background-color: #FF5B24;
+  color: #fff;
+  border-color: #FF5B24;
+}
+
+.pf-v5-c-login #social-vipps.pf-v5-c-button.pf-m-secondary:hover {
+  background-color: #ff6a3b;
+}
+
+.pf-v5-c-login #social-vipps.pf-v5-c-button.pf-m-secondary:active {
+  background-color: #e65422;
+}
+
+.pf-v5-c-login #social-vipps.pf-v5-c-button.pf-m-secondary:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+/* Hide any inline icon and inject official Vipps logo */
+.pf-v5-c-login #social-vipps svg {
+  display: none;
+}
+
+.pf-v5-c-login #social-vipps.pf-v5-c-button span::after {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 16px;
+  background: url(../../img/logo-vipps.svg) no-repeat center / contain;
+  position: relative;
+  top: 4px;
+  margin-left: 1rem;
+}
+
