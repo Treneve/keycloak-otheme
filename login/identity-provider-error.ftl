@@ -1,20 +1,16 @@
 <#import "template.ftl" as layout>
-<#import "buttons.ftl" as buttons>
-
 <@layout.registrationLayout displayMessage=false; section>
-<!-- template: identity-provider-error.ftl -->
-
     <#if section = "header">
-        ${msg("idpErrorTitle")}
+        ${kcSanitize(msg("errorTitle"))?no_esc}
     <#elseif section = "form">
-    <div class="${properties.kcContentWrapperClass}">
-        ${kcSanitize(msg("idpErrorText"))?no_esc}
-    </div>
-    <form class="${properties.kcFormClass!}" action="${url.loginAction}" method="POST">
-        <@buttons.actionGroup>
-            <@buttons.button name="accept" id="kc-accept" label="doAccept" class=["kcButtonPrimaryClass"]/>
-        </@buttons.actionGroup>
-    </form>
-    <div class="clearfix"></div>
+        <div id="kc-error-message">
+            <p class="instruction">${kcSanitize(msg("idpMappingError"))?no_esc}</p>
+            <#if skipLink??>
+            <#else>
+                <#if client?? && client.baseUrl?has_content>
+                    <p><a id="backToApplication" href="${client.baseUrl}">${kcSanitize(msg("backToApplication"))?no_esc}</a></p>
+                </#if>
+            </#if>
+        </div>
     </#if>
 </@layout.registrationLayout>
