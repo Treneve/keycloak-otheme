@@ -68,8 +68,10 @@
 }
 
 /* Extra guard: never underline non-link variant buttons even if they are anchors */
-.pf-v5-c-login .pf-v5-c-button:not(.pf-m-link) { text-decoration: none !important; }
-.pf-v5-c-login .pf-v5-c-button:not(.pf-m-link):is(:hover,:focus) { text-decoration: none !important; }
+.pf-v5-c-login .pf-v5-c-button:not(.pf-m-link),
+.pf-v5-c-login .pf-v5-c-button:not(.pf-m-link):is(:hover, :focus, :focus-visible, :active) {
+  text-decoration: none !important;
+}
 
 .pf-v5-c-login .pf-v5-c-button.pf-m-primary:hover {
   background-color: var(--brand-button-bg--hover);
@@ -103,23 +105,22 @@
     top: 4px;
 }
 
-#password-show-password .fa-eye::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url(../../img/eye-20px.svg) no-repeat center / contain;
-    position: relative;
-    top: 4px;
-}
+/* Consolidated password visibility icons */
+#password-show-password .fa-eye::before,
 #password-show-password .fa-eye-slash::before {
     content: "";
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url(../../img/eye-off-20px.svg) no-repeat center / contain;
+    width: var(--password-icon-size, 20px);
+    height: var(--password-icon-size, 20px);
+    background: no-repeat center / contain;
     position: relative;
     top: 4px;
+}
+#password-show-password .fa-eye::before {
+    background-image: url(../../img/eye-20px.svg);
+}
+#password-show-password .fa-eye-slash::before {
+    background-image: url(../../img/eye-off-20px.svg);
 }
 
 /* Make input-group control buttons match form-control borders */
@@ -144,7 +145,9 @@
 
 /* Hover/focus: adopt the same accent color as inputs */
 .pf-v5-c-login .pf-v5-c-button.pf-m-control:hover,
-.pf-v5-c-login .pf-v5-c-button.pf-m-control:focus-visible {
+.pf-v5-c-login .pf-v5-c-button.pf-m-control:focus,
+.pf-v5-c-login .pf-v5-c-button.pf-m-control:focus-visible,
+.pf-v5-c-login .pf-v5-c-button.pf-m-control:active {
   /* Keep border colors unchanged (esp. bottom) */
   --pf-v5-c-button--m-control--after--BorderTopColor: var(--pf-v5-c-form-control--before--BorderTopColor, #b1b3b4);
   --pf-v5-c-button--m-control--after--BorderRightColor: var(--pf-v5-c-form-control--before--BorderRightColor, #b1b3b4);
@@ -161,6 +164,8 @@
 
 /* Ensure PF overlay bottom border doesn't thicken on hover */
 .pf-v5-c-login .pf-v5-c-button.pf-m-control:hover::after,
-.pf-v5-c-login .pf-v5-c-button.pf-m-control:focus-visible::after {
+.pf-v5-c-login .pf-v5-c-button.pf-m-control:focus::after,
+.pf-v5-c-login .pf-v5-c-button.pf-m-control:focus-visible::after,
+.pf-v5-c-login .pf-v5-c-button.pf-m-control:active::after {
   border-bottom-width: 1px !important;
 }
