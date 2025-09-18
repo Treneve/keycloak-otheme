@@ -103,6 +103,25 @@
     top: 4px;
 }
 
+#password-show-password .fa-eye::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../../img/eye-20px.svg) no-repeat center / contain;
+    position: relative;
+    top: 4px;
+}
+#password-show-password .fa-eye-slash::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../../img/eye-off-20px.svg) no-repeat center / contain;
+    position: relative;
+    top: 4px;
+}
+
 /* Make input-group control buttons match form-control borders */
 .pf-v5-c-login .pf-v5-c-button.pf-m-control {
   /* Ensure a full 1px border like inputs */
