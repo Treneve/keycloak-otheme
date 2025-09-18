@@ -50,6 +50,15 @@
   box-shadow: none; /* keep behavior consistent with original */
 }
 
+/* Slightly shrink the control inside input groups so adjacent icon buttons stay visible */
+.pf-v5-c-login .pf-v5-c-input-group__item.pf-m-fill .pf-v5-c-form-control {
+  width: 98%;
+}
+
+.pf-v5-c-login .pf-v5-c-input-group__item.pf-m-fill .pf-v5-c-form-control > :is(input, select, textarea) {
+  width: 100%;
+}
+
 .pf-v5-c-form-control>:is(input,select,textarea):focus {
   outline: none;
 }
