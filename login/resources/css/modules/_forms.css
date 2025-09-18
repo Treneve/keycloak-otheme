@@ -28,6 +28,29 @@
   transition: border-color 180ms ease, box-shadow 180ms ease;
 }
 
+.pf-v5-c-login .pf-v5-c-form {
+  --tek-login-form-spacing: clamp(1.25rem, 4vw, 1.5rem);
+}
+
+.pf-v5-c-login #kc-form-login.pf-v5-c-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tek-login-form-spacing);
+}
+
+.pf-v5-c-login #kc-form-login > input[type="hidden"] {
+  display: none;
+}
+
+.pf-v5-c-login #kc-form-login .pf-v5-c-check {
+  margin: 0;
+}
+
+.pf-v5-c-login #kc-form-login .pf-v5-c-form__group {
+  --pf-v5-c-form__group--MarginBottom: 0;
+  margin: 0;
+}
+
 .pf-v5-c-login .pf-v5-c-form-control::placeholder {
   color: var(--brand-text-muted);
   opacity: 1;
