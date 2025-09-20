@@ -44,7 +44,7 @@
 /* Fallbacks if component vars are bypassed */
 .pf-v5-c-login #social-vipps.pf-v5-c-button.pf-m-secondary {
   background-color: #FF5B24;
-  color: #fff;
+  color: #FF5B24;
   border-color: #FF5B24;
 }
 
@@ -74,6 +74,6 @@
   background: url(../../img/logo-vipps.svg) no-repeat center / contain;
   position: relative;
   top: 4px;
-  margin-left: 1rem;
+  margin-left: -3rem;
 }
 
