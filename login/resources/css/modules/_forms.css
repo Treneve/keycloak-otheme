@@ -32,6 +32,7 @@
   --tek-login-form-spacing: clamp(1.25rem, 4vw, 1.5rem);
 }
 
+/* Make login form spacing consistent by using flex gap and removing PF defaults */
 .pf-v5-c-login #kc-form-login.pf-v5-c-form {
   display: flex;
   flex-direction: column;
