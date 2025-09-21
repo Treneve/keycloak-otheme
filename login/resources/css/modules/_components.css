@@ -31,3 +31,57 @@
   margin-left: 0.75em; /* spacing after text */
 }
 
+/* Header language toggle injected via custom.js */
+.pf-v5-c-login .tek-locale-container {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--brand-text);
+}
+
+.pf-v5-c-login .tek-locale-switch {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: color 180ms ease;
+}
+
+.pf-v5-c-login .tek-locale-switch:hover {
+  color: var(--brand-link);
+  text-decoration: underline;
+}
+
+.pf-v5-c-login .tek-locale-switch:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+.pf-v5-c-login .tek-locale-switch[aria-disabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.pf-v5-c-login .tek-locale-globe {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: url('../../img/globe.svg') no-repeat center / contain;
+}
+
+@media (max-width: 576px) {
+  .pf-v5-c-login .tek-locale-container {
+    position: static;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+}
