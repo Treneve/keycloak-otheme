@@ -107,17 +107,7 @@ function initLocaleToggle() {
   switchLink.addEventListener('click', (event) => {
     if (switchLink.getAttribute('aria-disabled') === 'true') {
       event.preventDefault();
-      return;
     }
-    const nextState = activeState === 'english' ? 'norwegian' : 'english';
-    const targetHref = getHrefForState(nextState);
-    if (!targetHref) {
-      event.preventDefault();
-      return;
-    }
-    activeState = nextState;
-    // allow default navigation; update link text immediately for responsiveness
-    updateLink();
   });
 
   const globe = document.createElement('span');
