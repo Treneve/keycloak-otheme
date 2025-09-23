@@ -31,7 +31,7 @@
   margin-left: 0.75em; /* spacing after text */
 }
 
-/* Header language toggle injected via custom.js */
+/* Header language toggle override template.ftl */
 .pf-v5-c-login .tek-locale-container {
   position: absolute;
   top: 61px;
