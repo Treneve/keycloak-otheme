@@ -7,11 +7,13 @@
     display: none;
 }
 
+
 /* Uses the outer PF5 login wrapper */
 .pf-v5-c-login {
     background-image: url("../img/bli-medlem-ill.svg");
     background-position: bottom right;
     background-repeat: no-repeat;
+    --pf-v5-global--BoxShadow--xl: 0 1rem 2rem 0 rgba(3, 3, 3, 0.05), 0 0 1rem 0 rgba(3, 3, 3, .05);
 }
 
 
@@ -20,7 +22,7 @@
 }
 
 .pf-v5-c-login__main {
-    --pf-v5-c-login__main--BoxShadow: none;
+    /* --pf-v5-c-login__main--BoxShadow: none; */
     border-radius: 15px;
     width: 436px;
     max-width: 100%;
