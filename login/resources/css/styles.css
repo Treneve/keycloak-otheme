@@ -6,6 +6,13 @@
 #kc-header {
     display: none;
 }
+#kc-social-providers {
+    ul, li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
 
 
 /* Uses the outer PF5 login wrapper */
@@ -27,6 +34,7 @@
     width: 436px;
     max-width: 100%;
     margin: 0 auto;
+    padding-bottom: 1.2rem;
     position: relative; /* for language selector */
 }
 
