@@ -25,7 +25,7 @@
     width: 436px;
     max-width: 100%;
     margin: 0 auto;
-    position: relative; // for language selector
+    position: relative; /* for language selector */
 }
 
 
