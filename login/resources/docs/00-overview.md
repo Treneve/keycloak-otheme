@@ -63,3 +63,5 @@ kcLoginMainTitle=pf-v5-c-title pf-m-2xl
 - Add a new module under `resources/css/modules/` and append it to `styles=` in `theme.properties` at the correct position in the cascade.
 - Prefer tokens over high-specificity selectors; keep everything scoped to `.pf-v5-c-login`.
 
+## Building on server
+- After deploying or rebuilding the theme on a Keycloak server, sign in to the admin console, select the relevant realm, and ensure **Login Theme → Dark mode** is disabled; the toggle styling assumes the light variant.

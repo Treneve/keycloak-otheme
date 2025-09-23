@@ -31,5 +31,6 @@ This document records the overrides we ship with the Tekna login theme to replac
 - If you modify the link text, update both the text node and the `aria-label` string.
 - Remember to keep `styles.css` and `_components.css` in sync if you move or rename CSS selectors used by the toggle.
 
+
 ## Rollback
 Switch the realm theme back to `keycloak.v2` or delete `docker/otheme/login/template.ftl` to restore default behaviour.
