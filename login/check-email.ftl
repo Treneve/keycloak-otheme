@@ -3,15 +3,17 @@
     <#if section = "header">
         ${kcSanitize(msg("passwordResetPageTitle"))?no_esc}
     <#elseif section = "form">
-        <p id="instruction1" class="instruction">
-            <div>
-                <#if isPhoneNumber?? >
-                    <p>${msg( "passwordResetPageInstructionsSms", identifier)}</p>
+        <div class="pf-v5-u-mb-lg">
+            <p id="instruction1" class="instruction pf-v5-u-mb-md">
+                <#if isPhoneNumber??>
+                    ${msg("passwordResetPageInstructionsSms", identifier)}
                 <#else>
-                    <p>${msg("passwordResetPageInstructionsEmail", identifier)}</p>
+                    ${msg("passwordResetPageInstructionsEmail", identifier)}
                 </#if>
-            </div>
-            ${msg("pageExpiredMsg1")} <a id="loginRestartLink" href="${url.loginRestartFlowUrl}">${msg("doClickHere")}</a> .<br/>
-        </p>
+            </p>
+            <p class="pf-v5-u-mb-0">
+                ${msg("pageExpiredMsg1")} <a id="loginRestartLink" href="${url.loginRestartFlowUrl}">${msg("doClickHere")}</a>.
+            </p>
+        </div>
     </#if>
 </@layout.registrationLayout>
