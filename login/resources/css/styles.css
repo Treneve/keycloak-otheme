@@ -86,6 +86,10 @@
     text-decoration-thickness: var(--text-decoration-thickness-hover) !important;
 }
 
+#kc-error-message p + p {
+    margin-top: 1rem;
+}
+
 
 .kc-login-tooltip {
     position: relative;
