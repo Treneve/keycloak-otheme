@@ -34,7 +34,7 @@
     width: 436px;
     max-width: 100%;
     margin: 0 auto;
-    padding-bottom: 1.2rem;
+    /* padding-bottom: 1.2rem; */
     position: relative; /* for language selector */
 }
 
@@ -84,6 +84,29 @@
 .pf-v5-c-login a:focus {
     text-decoration: revert;
     text-decoration-thickness: var(--text-decoration-thickness-hover) !important;
+}
+
+body[data-page-id="login-logout-confirm"] #kc-logout-confirm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--pf-v5-global--spacer--lg);
+}
+
+body[data-page-id="login-logout-confirm"] #kc-logout-confirm .instruction,
+body[data-page-id="login-logout-confirm"] #kc-logout-confirm form,
+body[data-page-id="login-logout-confirm"] #kc-logout-confirm #kc-form-buttons,
+body[data-page-id="login-logout-confirm"] #kc-logout-confirm #kc-info-message p {
+    margin: 0;
+}
+
+body[data-page-id="login-logout-confirm"] #kc-logout-confirm .form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--pf-v5-global--spacer--md);
+}
+
+body[data-page-id="login-logout-confirm"] #kc-logout-confirm #kc-logout {
+    cursor: pointer;
 }
 
 #kc-error-message p + p,
