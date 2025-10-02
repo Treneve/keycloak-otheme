@@ -27,6 +27,8 @@
   gap: 12px;
   text-decoration: none;
   transition: background-color 180ms ease, box-shadow 180ms ease, color 180ms ease;
+
+  margin-bottom: 1.25rem;
 }
 
 /* Ensure the overlay border stays invisible and fades smoothly */

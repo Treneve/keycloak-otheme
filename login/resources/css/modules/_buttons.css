@@ -169,3 +169,8 @@
 .pf-v5-c-login .pf-v5-c-button.pf-m-control:active::after {
   border-bottom-width: 1px !important;
 }
+
+
+#kc-login[type="submit"] {
+  margin-bottom: 1.75rem;
+}
