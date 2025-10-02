@@ -86,7 +86,9 @@
     text-decoration-thickness: var(--text-decoration-thickness-hover) !important;
 }
 
-#kc-error-message p + p {
+#kc-error-message p + p,
+#kc-info-message p + p
+{
     margin-top: 1rem;
 }
 
