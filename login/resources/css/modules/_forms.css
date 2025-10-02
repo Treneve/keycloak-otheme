@@ -6,15 +6,15 @@
   --pf-v5-c-form-control--before--BorderBottomWidth: 1px;
   --pf-v5-c-form-control--before--BorderLeftWidth: 1px;
 
-  --pf-v5-c-form-control--before--BorderTopColor: #b1b3b4;
-  --pf-v5-c-form-control--before--BorderRightColor: #b1b3b4;
-  --pf-v5-c-form-control--before--BorderBottomColor: #b1b3b4;
-  --pf-v5-c-form-control--before--BorderLeftColor: #b1b3b4;
+  --pf-v5-c-form-control--before--BorderTopColor: var(--brand-border-default);
+  --pf-v5-c-form-control--before--BorderRightColor: var(--brand-border-default);
+  --pf-v5-c-form-control--before--BorderBottomColor: var(--brand-border-default);
+  --pf-v5-c-form-control--before--BorderLeftColor: var(--brand-border-default);
 
   --pf-v5-c-form-control--after--BorderBottomWidth: 0;
   --pf-v5-c-form-control--after--BorderBottomColor: transparent;
 
-  --pf-v5-c-form-control--BorderColor: #b1b3b4;
+  --pf-v5-c-form-control--BorderColor: var(--brand-border-default);
   --pf-v5-c-form-control--hover--BorderColor: var(--brand-primary);
   --pf-v5-c-form-control--focus--BorderColor: var(--brand-primary);
   --pf-v5-c-form-control--BorderRadius: 0;

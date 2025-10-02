@@ -11,9 +11,9 @@
 
   /* Secondary variant: white -> light teal on hover */
   --pf-v5-c-button--m-secondary--BackgroundColor: #fff;
-  --pf-v5-c-button--m-secondary--hover--BackgroundColor: #CCF0F0;
-  --pf-v5-c-button--m-secondary--after--BorderColor: #003847;
-  --pf-v5-c-button--m-secondary--Color: #003847;
+  --pf-v5-c-button--m-secondary--hover--BackgroundColor: var(--brand-light-blue);
+  --pf-v5-c-button--m-secondary--after--BorderColor: var(--brand-link);
+  --pf-v5-c-button--m-secondary--Color: var(--brand-link);
   --pf-v5-c-button--after--BorderRadius: 0;
 
   /* Size: target ~48px total height
@@ -46,8 +46,8 @@
 /* Fallbacks for secondary variant */
 .pf-v5-c-login .pf-v5-c-button.pf-m-secondary {
   background-color: #fff;
-  border-color: #003847;
-  color: #003847;
+  border-color: var(--brand-link);
+  color: var(--brand-link);
   border-radius: 0;
   transition: background-color 180ms ease;
   /* Keep border width and color stable across states */
@@ -55,15 +55,15 @@
   --pf-v5-c-button--hover--after--BorderWidth: 1px;
   --pf-v5-c-button--focus--after--BorderWidth: 1px;
   --pf-v5-c-button--active--after--BorderWidth: 1px;
-  --pf-v5-c-button--m-secondary--hover--after--BorderColor: #003847;
-  --pf-v5-c-button--m-secondary--focus--after--BorderColor: #003847;
-  --pf-v5-c-button--m-secondary--active--after--BorderColor: #003847;
+  --pf-v5-c-button--m-secondary--hover--after--BorderColor: var(--brand-link);
+  --pf-v5-c-button--m-secondary--focus--after--BorderColor: var(--brand-link);
+  --pf-v5-c-button--m-secondary--active--after--BorderColor: var(--brand-link);
   text-decoration: none !important; /* anchor-based button should not underline */
 }
 .pf-v5-c-login .pf-v5-c-button.pf-m-secondary:hover {
-  background-color: #CCF0F0;
-  --pf-v5-c-button--after--BorderColor: #003847;
-  border-color: #003847; /* fallback to avoid color shift */
+  background-color: var(--brand-light-blue);
+  --pf-v5-c-button--after--BorderColor: var(--brand-link);
+  border-color: var(--brand-link); /* fallback to avoid color shift */
   text-decoration: none !important;
 }
 
@@ -90,9 +90,9 @@
 /* Disabled state retains contrast but looks inert */
 .pf-v5-c-login .pf-v5-c-button.pf-m-primary:disabled,
 .pf-v5-c-login .pf-v5-c-button.pf-m-primary.pf-m-disabled {
-  background-color: #2c3e44;
-  border-color: #2c3e44;
-  color: rgba(255, 255, 255, .72);
+  background-color: var(--brand-button-bg--disabled);
+  border-color: var(--brand-button-bg--disabled);
+  color: var(--brand-button-color--disabled);
 }
 
 #reset-login .fa-sync-alt::before {
@@ -132,15 +132,15 @@
   --pf-v5-c-button--m-control--after--BorderLeftWidth: 1px;
 
   /* Default border color identical to inputs */
-  --pf-v5-c-button--m-control--after--BorderColor: var(--pf-v5-c-form-control--BorderColor, #b1b3b4);
-  --pf-v5-c-button--m-control--after--BorderTopColor: var(--pf-v5-c-form-control--before--BorderTopColor, #b1b3b4);
-  --pf-v5-c-button--m-control--after--BorderRightColor: var(--pf-v5-c-form-control--before--BorderRightColor, #b1b3b4);
-  --pf-v5-c-button--m-control--after--BorderBottomColor: var(--pf-v5-c-form-control--before--BorderBottomColor, #b1b3b4);
-  --pf-v5-c-button--m-control--after--BorderLeftColor: var(--pf-v5-c-form-control--before--BorderLeftColor, #b1b3b4);
+  --pf-v5-c-button--m-control--after--BorderColor: var(--pf-v5-c-form-control--BorderColor, var(--brand-border-default));
+  --pf-v5-c-button--m-control--after--BorderTopColor: var(--pf-v5-c-form-control--before--BorderTopColor, var(--brand-border-default));
+  --pf-v5-c-button--m-control--after--BorderRightColor: var(--pf-v5-c-form-control--before--BorderRightColor, var(--brand-border-default));
+  --pf-v5-c-button--m-control--after--BorderBottomColor: var(--pf-v5-c-form-control--before--BorderBottomColor, var(--brand-border-default));
+  --pf-v5-c-button--m-control--after--BorderLeftColor: var(--pf-v5-c-form-control--before--BorderLeftColor, var(--brand-border-default));
 
   --pf-v5-c-button--m-control--after--BorderRadius: 0;
   border-radius: 0; /* fallback */
-  border-color: var(--pf-v5-c-form-control--BorderColor, #b1b3b4); /* fallback */
+  border-color: var(--pf-v5-c-form-control--BorderColor, var(--brand-border-default)); /* fallback */
 }
 
 /* Hover/focus: adopt the same accent color as inputs */
@@ -149,16 +149,16 @@
 .pf-v5-c-login .pf-v5-c-button.pf-m-control:focus-visible,
 .pf-v5-c-login .pf-v5-c-button.pf-m-control:active {
   /* Keep border colors unchanged (esp. bottom) */
-  --pf-v5-c-button--m-control--after--BorderTopColor: var(--pf-v5-c-form-control--before--BorderTopColor, #b1b3b4);
-  --pf-v5-c-button--m-control--after--BorderRightColor: var(--pf-v5-c-form-control--before--BorderRightColor, #b1b3b4);
-  --pf-v5-c-button--m-control--after--BorderBottomColor: var(--pf-v5-c-form-control--before--BorderBottomColor, #b1b3b4);
-  --pf-v5-c-button--m-control--after--BorderLeftColor: var(--pf-v5-c-form-control--before--BorderLeftColor, #b1b3b4);
-  --pf-v5-c-button--m-control--after--BorderColor: var(--pf-v5-c-form-control--BorderColor, #b1b3b4);
+  --pf-v5-c-button--m-control--after--BorderTopColor: var(--pf-v5-c-form-control--before--BorderTopColor, var(--brand-border-default));
+  --pf-v5-c-button--m-control--after--BorderRightColor: var(--pf-v5-c-form-control--before--BorderRightColor, var(--brand-border-default));
+  --pf-v5-c-button--m-control--after--BorderBottomColor: var(--pf-v5-c-form-control--before--BorderBottomColor, var(--brand-border-default));
+  --pf-v5-c-button--m-control--after--BorderLeftColor: var(--pf-v5-c-form-control--before--BorderLeftColor, var(--brand-border-default));
+  --pf-v5-c-button--m-control--after--BorderColor: var(--pf-v5-c-form-control--BorderColor, var(--brand-border-default));
 
   /* Instead, give a light background on hover */
   --pf-v5-c-button--m-control--hover--BackgroundColor: var(--brand-light-blue-bg);
   background-color: var(--brand-light-blue-bg);
-  border-color: var(--pf-v5-c-form-control--BorderColor, #b1b3b4); /* fallback consistency */
+  border-color: var(--pf-v5-c-form-control--BorderColor, var(--brand-border-default)); /* fallback consistency */
 
 }
 
@@ -168,9 +168,4 @@
 .pf-v5-c-login .pf-v5-c-button.pf-m-control:focus-visible::after,
 .pf-v5-c-login .pf-v5-c-button.pf-m-control:active::after {
   border-bottom-width: 1px !important;
-}
-
-
-#kc-login[type="submit"] {
-  margin-bottom: 1.75rem;
 }

@@ -10,6 +10,7 @@
   --pf-v5-c-login__main-footer-band--BorderTopColor: transparent;
   --pf-v5-c-login__main-footer-band--PaddingRight: 0;
   --pf-v5-c-login__main-footer-band--PaddingLeft: 0;
+  --pf-v5-c-login__main-footer-band--PaddingBottom: 0;
   display: flex;
   align-items: center;
   text-align: center;

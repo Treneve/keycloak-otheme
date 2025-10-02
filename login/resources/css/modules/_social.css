@@ -3,7 +3,7 @@
 /* Transform the secondary social button into a brand Vipps button */
 .pf-v5-c-login #social-vipps.pf-v5-c-button {
   /* Token-first: make secondary look filled */
-  --pf-v5-c-button--m-secondary--BackgroundColor: #FF5B24;
+  --pf-v5-c-button--m-secondary--BackgroundColor: var(--brand-vipps-bg);
   --pf-v5-c-button--m-secondary--Color: #fff;
   --pf-v5-c-button--m-secondary--after--BorderColor: transparent;
   --pf-v5-c-button--m-secondary--hover--after--BorderColor: transparent;
@@ -13,11 +13,11 @@
   --pf-v5-c-button--hover--after--BorderWidth: 0;
   --pf-v5-c-button--focus--after--BorderWidth: 0;
   --pf-v5-c-button--active--after--BorderWidth: 0;
-  --pf-v5-c-button--m-secondary--hover--BackgroundColor: #ff6a3b;
+  --pf-v5-c-button--m-secondary--hover--BackgroundColor: var(--brand-vipps-bg--hover);
   /* subtle hover */
   --pf-v5-c-button--m-secondary--hover--Color: #fff;
-  --pf-v5-c-button--m-secondary--focus--BackgroundColor: #ff6a3b;
-  --pf-v5-c-button--m-secondary--active--BackgroundColor: #e65422;
+  --pf-v5-c-button--m-secondary--focus--BackgroundColor: var(--brand-vipps-bg--hover);
+  --pf-v5-c-button--m-secondary--active--BackgroundColor: var(--brand-vipps-bg--active);
   --pf-v5-c-button--BorderRadius: 0;
   --pf-v5-c-button--PaddingLeft: 1rem;
   --pf-v5-c-button--PaddingRight: 1rem;
@@ -28,7 +28,8 @@
   text-decoration: none;
   transition: background-color 180ms ease, box-shadow 180ms ease, color 180ms ease;
 
-  margin-bottom: 1.25rem;
+  /* margin-bottom: var(--pf-v5-global--spacer--lg); */
+  margin-top: var(--pf-v5-global--spacer--lg);
 }
 
 /* Ensure the overlay border stays invisible and fades smoothly */
@@ -45,17 +46,17 @@
 
 /* Fallbacks if component vars are bypassed */
 .pf-v5-c-login #social-vipps.pf-v5-c-button.pf-m-secondary {
-  background-color: #FF5B24;
-  color: #FF5B24;
-  border-color: #FF5B24;
+  background-color: var(--brand-vipps-bg);
+  color: var(--brand-vipps-bg);
+  border-color: var(--brand-vipps-bg);
 }
 
 .pf-v5-c-login #social-vipps.pf-v5-c-button.pf-m-secondary:hover {
-  background-color: #ff6a3b;
+  background-color: var(--brand-vipps-bg--hover);
 }
 
 .pf-v5-c-login #social-vipps.pf-v5-c-button.pf-m-secondary:active {
-  background-color: #e65422;
+  background-color: var(--brand-vipps-bg--active);
 }
 
 .pf-v5-c-login #social-vipps.pf-v5-c-button.pf-m-secondary:focus-visible {
@@ -78,4 +79,3 @@
   top: 4px;
   margin-left: -3rem;
 }
-
