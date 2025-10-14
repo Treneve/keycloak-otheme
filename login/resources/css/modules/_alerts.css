@@ -33,5 +33,7 @@
 
 .pf-v5-c-login .pf-v5-c-alert.pf-m-inline .pf-v5-c-alert__icon {
   margin-left: 0;
+  top: -1px;
+  position: relative;
 }
 
