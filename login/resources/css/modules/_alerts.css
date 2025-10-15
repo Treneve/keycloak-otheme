@@ -13,10 +13,13 @@
 }
 
 /* Remove background + top border for inline danger alerts */
-.pf-v5-c-login .pf-v5-c-alert.pf-m-inline.pf-m-danger {
+.pf-v5-c-login .pf-v5-c-alert.pf-m-inline:is(.pf-m-danger, .pf-m-warning) {
   --pf-v5-c-alert--BackgroundColor: transparent;
   --pf-v5-c-alert--m-inline--BackgroundColor: transparent;
   --pf-v5-c-alert--m-inline--m-danger--BackgroundColor: transparent;
+  --pf-v5-c-alert--m-inline--m-warning--BackgroundColor: transparent;
+  --pf-v5-c-alert--m-inline--m-warning--BorderTopColor: transparent;
+  --pf-v5-c-alert--m-inline--m-warning--BoxShadow: none;
   /* remove left indent */
   --pf-v5-c-alert--PaddingLeft: 0;
   --pf-v5-c-alert--BorderTopWidth: 0;
@@ -36,4 +39,3 @@
   top: -1px;
   position: relative;
 }
-

@@ -33,13 +33,13 @@
 }
 
 /* Make login form spacing consistent by using flex gap and removing PF defaults */
-.pf-v5-c-login #kc-form-login.pf-v5-c-form {
+.pf-v5-c-login :is(#kc-form-login, #kc-passwd-update-form).pf-v5-c-form {
   display: flex;
   flex-direction: column;
   gap: var(--tek-login-form-spacing);
 }
 
-.pf-v5-c-login #kc-form-login .pf-v5-c-form__label {
+.pf-v5-c-login :is(#kc-form-login, #kc-passwd-update-form) .pf-v5-c-form__label {
   margin-bottom: 0.9rem;
 }
 
@@ -47,15 +47,15 @@
   margin-block-end: var(--tek-login-form-spacing) !important;
 }
 
-.pf-v5-c-login #kc-form-login > input[type="hidden"] {
+.pf-v5-c-login :is(#kc-form-login, #kc-passwd-update-form) > input[type="hidden"] {
   display: none;
 }
 
-.pf-v5-c-login #kc-form-login .pf-v5-c-check {
+.pf-v5-c-login :is(#kc-form-login, #kc-passwd-update-form) .pf-v5-c-check {
   margin: 0;
 }
 
-.pf-v5-c-login #kc-form-login .pf-v5-c-form__group {
+.pf-v5-c-login :is(#kc-form-login, #kc-passwd-update-form) .pf-v5-c-form__group {
   --pf-v5-c-form__group--MarginBottom: 0;
   margin: 0;
 }
