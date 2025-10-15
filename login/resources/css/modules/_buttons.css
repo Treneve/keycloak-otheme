@@ -106,8 +106,8 @@
 }
 
 /* Consolidated password visibility icons */
-#password-show-password .fa-eye::before,
-#password-show-password .fa-eye-slash::before {
+.pf-v5-c-login [id$="show-password"] .fa-eye::before,
+.pf-v5-c-login [id$="show-password"] .fa-eye-slash::before {
     content: "";
     display: inline-block;
     width: var(--password-icon-size, 20px);
@@ -116,10 +116,10 @@
     position: relative;
     top: 4px;
 }
-#password-show-password .fa-eye::before {
+.pf-v5-c-login [id$="show-password"] .fa-eye::before {
     background-image: url(../../img/eye-20px.svg);
 }
-#password-show-password .fa-eye-slash::before {
+.pf-v5-c-login [id$="show-password"] .fa-eye-slash::before {
     background-image: url(../../img/eye-off-20px.svg);
 }
 
