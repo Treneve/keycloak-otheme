@@ -18,6 +18,10 @@
                         <input type="hidden" name="cookieRefRememberMe" id="cookieRefRememberMe" value="${cookieRefRememberMe}" />
                     </#if>
 
+                    <#if IsBlockedMinutes??>
+                        ${kcSanitize(msg("userIsBlocked", IsBlockedMinutes))?no_esc}
+                    </#if>
+
                     <#if messagesPerField.existsError('username','password')>
                         <span id="input-error" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
                                 ${kcSanitize(messagesPerField.getFirstError('username','password'))?no_esc}
