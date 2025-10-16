@@ -2,7 +2,7 @@
 
 /* Typographic fallbacks to ensure the fonts are applied */
 .pf-v5-c-login,
-.pf-v5-c-login * {
+.pf-v5-c-login *:not(.fa):not(.fas):not(.far):not(.fal):not(.fad):not(.fab) {
   font-family: var(--pf-v5-global--FontFamily--text, "Tekna", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial);
 }
 
@@ -65,4 +65,3 @@
   outline: 2px solid var(--brand-primary);
   outline-offset: 2px;
 }
-
