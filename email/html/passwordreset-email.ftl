@@ -132,6 +132,15 @@
                                 </tr>
                               </tbody>
                             </table>
+                            <table class="s-5 w-full" role="presentation" border="0" cellpadding="0" cellspacing="0" style="width: 100%;" width="100%">
+                              <tbody>
+                                <tr>
+                                  <td style="line-height: 20px; font-size: 20px; width: 100%; height: 20px; margin: 0;" align="left" width="100%" height="20">
+                                    &#160;
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
                             <div class="">
                               <p class="" style="line-height: 24px; font-size: 16px; width: 100%; margin: 0;" align="left">${msg("passwordReset.regards")}</p>
                               <table class="s-5 w-full" role="presentation" border="0" cellpadding="0" cellspacing="0" style="width: 100%;" width="100%">
