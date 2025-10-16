@@ -80,7 +80,7 @@
                                 </tr>
                               </tbody>
                             </table>
-                            <p style="line-height: 24px; font-size: 16px; width: 100%; margin: 0;" align="left">${msg("passwordReset.intro", realmName)}</p>
+                            <p style="line-height: 24px; font-size: 16px; width: 100%; margin: 0;" align="left">${msg("passwordReset.intro", user.email?default(""))}</p>
                             <table class="s-5 w-full" role="presentation" border="0" cellpadding="0" cellspacing="0" style="width: 100%;" width="100%">
                               <tbody>
                                 <tr>
