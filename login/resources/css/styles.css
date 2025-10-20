@@ -38,6 +38,57 @@
     position: relative; /* for language selector */
 }
 
+.tek-back-link {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 2;
+}
+
+.tek-back-link__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: inherit;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    text-decoration: none;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tek-back-link__link:hover,
+.tek-back-link__link:focus-visible {
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    outline: none;
+}
+
+.tek-back-link__link:focus-visible {
+    outline: 2px solid var(--pf-v5-global--link--Color, #0066cc);
+    outline-offset: 2px;
+}
+
+.tek-back-link__icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.tek-back-link__sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 
 .pf-v5-c-title {
     position: relative;

@@ -147,6 +147,19 @@
     <main class="${properties.kcLoginMain!}">
       <div class="${properties.kcLoginMainHeader!}">
         <h1 class="${properties.kcLoginMainTitle!}" id="kc-page-title"><#nested "header"></h1>
+        <#if client?? && client.baseUrl?has_content>
+          <#assign backToApplicationLabel = (msg("backToApplication")!msg("backToApplicationTemplate")!"")>
+          <div id="backToApplicationTemplate" class="tek-back-link">
+            <a id="backToApplicationTemplate"
+               class="tek-back-link__link"
+               href="${client.baseUrl}"
+               aria-label="${backToApplicationLabel}"
+               title="${backToApplicationLabel}">
+              <img class="tek-back-link__icon" src="${url.resourcesPath}/img/x.svg" alt="" aria-hidden="true">
+              <span class="tek-back-link__sr">${backToApplicationLabel}</span>
+            </a>
+          </div>
+        </#if>
         <#if realm.internationalizationEnabled && locale.supported?size gt 1>
 
           <#assign EN = ["en","en-us","en-gb"]>
