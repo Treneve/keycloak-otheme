@@ -156,7 +156,6 @@
                aria-label="${backToApplicationLabel}"
                title="${backToApplicationLabel}">
               <img class="tek-back-link__icon" src="${url.resourcesPath}/img/x.svg" alt="" aria-hidden="true">
-              <span class="tek-back-link__sr">${backToApplicationLabel}</span>
             </a>
           </div>
         </#if>
